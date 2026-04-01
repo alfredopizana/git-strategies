@@ -1,16 +1,20 @@
 // Utility functions
-// Good file for conflict demo — multiple people might edit this
 
 function greet(name) {
-  return `Hello, ${name}! Welcome to the project.`;
+  return `Hey ${name}! Ready to build something awesome?`;
 }
 
 function formatDate(date) {
-  return date.toISOString().split("T")[0];
+  const options = { year: "numeric", month: "long", day: "numeric" };
+  return date.toLocaleDateString("en-US", options);
 }
 
 function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-module.exports = { greet, formatDate, capitalize };
+function slugify(str) {
+  return str.toLowerCase().replace(/\s+/g, "-");
+}
+
+module.exports = { greet, formatDate, capitalize, slugify };

@@ -3,9 +3,13 @@
 
 const config = {
   appName: "Git Standards Demo",
-  version: "1.0.0",
-  port: 3000,
+  version: "2.0.0",
+  port: 8080,
   environment: "development",
+  featureFlags: {
+    darkMode: true,
+    newDashboard: false,
+  },
 };
 
 module.exports = config;
