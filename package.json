@@ -11,5 +11,18 @@
     "build": "echo 'Build complete'"
   },
   "keywords": [],
-  "license": "ISC"
+  "license": "ISC",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alfredopizana/git-strategies.git"
+  },
+  "author": "",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/alfredopizana/git-strategies/issues"
+  },
+  "homepage": "https://github.com/alfredopizana/git-strategies#readme"
 }
