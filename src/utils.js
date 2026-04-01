@@ -1,16 +1,20 @@
 // Utility functions
-// Good file for conflict demo — multiple people might edit this
+// Refactored by the team lead
 
 function greet(name) {
-  return `Hello, ${name}! Welcome to the project.`;
+  return `Welcome aboard, ${name}! Let's get started.`;
 }
 
 function formatDate(date) {
-  return date.toISOString().split("T")[0];
+  return new Intl.DateTimeFormat("en-US").format(date);
 }
 
 function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-module.exports = { greet, formatDate, capitalize };
+function truncate(str, maxLength = 50) {
+  return str.length > maxLength ? str.slice(0, maxLength) + "..." : str;
+}
+
+module.exports = { greet, formatDate, capitalize, truncate };
