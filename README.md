@@ -27,4 +27,4 @@ npm start
 
 
 
-Contributor: Alfredo Pizaña
+Contributor: Alfredo Pizaña, Roy, Noah and Jen
