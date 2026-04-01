@@ -24,3 +24,7 @@ npm start
 - [Contributing Guide](CONTRIBUTING.md) — Branching and commit conventions
 - [PR Review Guide](docs/PR_REVIEW_GUIDE.md) — Step-by-step review process
 - [PR Template](.github/PULL_REQUEST_TEMPLATE/pull_request_template.md) — What every PR should include
+
+
+
+Contributor: Alfredo Pizaña
