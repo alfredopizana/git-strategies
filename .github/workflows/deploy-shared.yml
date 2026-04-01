@@ -1,0 +1,44 @@
+name: Shared Deployment
+
+on:
+  workflow_call:
+    inputs:
+      environment:
+        description: "Target environment (development | production)"
+        required: true
+        type: string
+
+jobs:
+  deploy:
+    name: Deploy to ${{ inputs.environment }}
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm ci
+
+      - run: npm run build
+
+      - name: Print Environment Config
+        run: |
+          echo "========================================="
+          echo "  Deploying to: ${{ inputs.environment }}"
+          echo "========================================="
+          echo "APP_NAME:    ${{ vars.APP_NAME }}"
+          echo "API_URL:     ${{ vars.API_URL }}"
+          echo "LOG_LEVEL:   ${{ vars.LOG_LEVEL }}"
+          echo "REGION:      ${{ vars.REGION }}"
+          echo "========================================="
+
+      - name: Simulate Deployment
+        run: |
+          echo "Starting deployment to ${{ inputs.environment }}..."
+          echo "Deploying commit: ${{ github.sha }}"
+          echo "Branch: ${{ github.ref_name }}"
+          echo "Triggered by: ${{ github.actor }}"
+          echo "Deployment complete!"

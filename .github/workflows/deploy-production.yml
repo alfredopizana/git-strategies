@@ -1,0 +1,26 @@
+name: Deploy to Production
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: "Type 'deploy' to confirm production deployment"
+        required: true
+        type: string
+
+jobs:
+  guard:
+    name: Validate Deployment
+    runs-on: ubuntu-latest
+    if: github.event_name == 'release' || github.event.inputs.confirm == 'deploy'
+    steps:
+      - name: Confirm
+        run: echo "Production deployment approved"
+
+  deploy:
+    needs: guard
+    uses: ./.github/workflows/deploy-shared.yml
+    with:
+      environment: production
