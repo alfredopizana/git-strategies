@@ -1,6 +1,6 @@
 # Git Standards Demo
 
-A demo project for the team's git workflow training session.
+A demo project for a git workflow training session.
 
 ## Quick Start
 
@@ -13,10 +13,11 @@ npm start
 
 1. **Local Development** — Clone, branch, and naming conventions
 2. **Trunk-Based Development** — PR, squash merge, CI triggers
-3. **Bypass Methodology** — Running CI on feature branches for cloud/data testing
-4. **Pull Request Reviews** — How to review thoroughly and constructively
-5. **Handling Gemini Feedback** — Using automated review as a first layer
-6. **Review Timeline** — Expectations and communication
+3. **CI/CD Direct Trigger** — Running CI on feature branches for cloud/data testing
+4. **How to create a PR**
+5. **Pull Request Reviews** — How to review thoroughly and constructively
+6. **Handling Gemini Feedback** — Using automated review as a first layer
+7. **Review Timeline** — Expectations and communication
 
 ## Resources
 

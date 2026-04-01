@@ -10,7 +10,7 @@ Every change must be done in its own branch. Every branch should contain changes
 
 | Type        | Prefix  | Example         |
 |-------------|---------|-----------------|
-| User Story  | `feat/` | `feat/GCP-101`  |
+| User Story  | `feat/` | `feat/AWS-101`  |
 | Task        | `task/` | `task/BE-246`   |
 | Bug         | `bug/`  | `bug/SE-357`    |
 | Hot Fix     | `fix/`  | `fix/PROD-999`  |
@@ -19,7 +19,7 @@ Every change must be done in its own branch. Every branch should contain changes
 
 - **One ticket per branch** — do not bundle changes from multiple tickets.
   - Exception: multiple bugs sharing the same root cause may be fixed in one branch.
-- After the prefix, add the **ticket ID** (e.g., `DE-2468`, `GCP-1357`).
+- After the prefix, add the **ticket ID** (e.g., `DE-2468`, `AWS-1357`).
 
 ### Quick Reference
 
